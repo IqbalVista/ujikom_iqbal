@@ -33,8 +33,9 @@ $siswa = mysqli_query($db, "SELECT * FROM siswa WHERE nisn='$nisnSiswa'");
              while($r = mysqli_fetch_assoc($kelas)){ ?>
                 <option value="<?= $r['id_kelas']; ?>"><?= $r['nama_kelas'] , " | " 
                . $r['kompetensi_keahlian']; ?></option>
-<$php } ?>    </select></td>
-             </tr>
+<?php } ?>    </select></td>
+             
+
 </body>
 
 </html>
