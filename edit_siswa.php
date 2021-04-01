@@ -8,7 +8,7 @@ $siswa = mysqli_query($db, "SELECT * FROM siswa WHERE nisn='$nisnSiswa'");
 
 <head>
     <meta charset="UTF-8">
-    <title>Edit data siswa</title>
+    <title>Edit data siswa asdasd</title>
 </head>
 
 <body>
