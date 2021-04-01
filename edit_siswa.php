@@ -25,7 +25,11 @@ $siswa = mysqli_query($db, "SELECT * FROM siswa WHERE nisn='$nisnSiswa'");
                     <td>Nama :</td>
                     <td><input type="text" name="nama" value="<?= $row['nama']; ?>"></td>
                 </tr>
-            <?php }  ?>
+                <tr>
+                     <td>Kelas :</td>
+                     <td>select name ="kelas">
+            <?php
+             $kelas
 </body>
 
 </html>
