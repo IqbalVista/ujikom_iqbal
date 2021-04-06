@@ -57,7 +57,7 @@ require_once("require.php");
 			</tr>
 			<tr>
 				<td>Jumlah bayar</td>
-				<td><input type="text" name="jumlah" placeholder="150000"></tdd>
+				<td><input type="text" name="jumlah" placeholder="100000"></tdd>
 			</tr>
 			<tr>
 				<td colspan="2"><button type="submit" name="simpan">Simpan</button></td>
@@ -77,13 +77,13 @@ if (isset($_POST['simpan'])) {
 	$tahun = $_POST['tahun'];
 	$spp = $_POST['spp'];
 	$cek = mysqli_query($db, "SELECT * FROM transaksi");
-	$ambilData = mysqli_fetch_assoc($cek);
-	$jumlah_bayar = $_POST['jumlah'];
+	$ambil = mysqli_fetch_assoc($cek);
+	$jumlah = $_POST['jumlah'];
 	if ($spp == $ambil['id_spp']) {
 		echo "<script>alert('Tahun spp tersebut sudah ada pada siswa');</script>";
 	} else {
 		$s = mysqli_query($db, "INSERT INTO pembayaran VALUES
-                ( '$ambilData', '$cek', '$petugas', '$nama', '$tgl', '$bulan', '$tahun', '$spp', '$jumlah_bayar')");
+                (NULL, '$petugas', '$nama', '$tgl', '$bulan', '$tahun', '$spp', '$jumlah')");
 		// Arahkan ke menu transaksi
 		if ($s) {
 			header("location: transaksi.php");
