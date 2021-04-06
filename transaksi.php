@@ -35,7 +35,7 @@ JOIN spp ON pembayaran.id_spp = spp.id_spp");
 				<td><?= $no ?> </td>
 				<td><?= $r['nama_petugas']; ?></td>
 				<td><?= $r['nama']; ?></td>
-				<td><?= $r['tgl_bayar'] . "/" . $r['bulan_bayar'] . "/" . $r['tahun_bayar']; ?></td>
+				<td><?= $r['tanggal_bayar'] . "/" . $r['bulan_bayar'] . "/" . $r['tahun_bayar']; ?></td>
 				<td><?= $r['nominal']; ?></td>
 				<td><?= $r['jumlah_bayar']; ?></td>
 				<td>

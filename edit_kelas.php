@@ -22,10 +22,6 @@ $kelas = mysqli_query($db, "SELECT * FROM kelas WHERE id_kelas='$id'");
             <table cellpadding="5">
                 <input type="hidden" name="id" value="<?= $row['id_kelas']; ?>">
                 <tr>
-                    <td>Id Kelas</td>
-                    <td><input type="number" name="nama" value="<?= $row['id_kelas']; ?>"></td>
-                </tr>
-                <tr>
                     <td>Nama Kelas :</td>
                     <td><input type="text" name="nama" value="<?= $row['nama_kelas']; ?>"></td>
                 </tr>
@@ -46,7 +42,6 @@ $kelas = mysqli_query($db, "SELECT * FROM kelas WHERE id_kelas='$id'");
 <?php
 // Proses update
 if (isset($_POST['simpan'])) {
-    $id = $_POST['id'];
     $nama = $_POST['nama'];
     $kk = $_POST['kk'];
     $update = mysqli_query($db, "UPDATE kelas SET nama_kelas='$nama', kompetensi_keahlian='$kk'

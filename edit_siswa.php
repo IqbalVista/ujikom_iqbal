@@ -71,4 +71,4 @@ if (isset($_POST['simpan'])) {
         echo "<script>alert('Gagal'); </script>";
     }
 }
-?> 80ffd4b98bb32a568dc498634f20818633bf1e4f
+?>

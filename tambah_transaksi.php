@@ -6,12 +6,12 @@ require_once("require.php");
 
 <head>
 	<meta charset="UTF-8">
-	<title>Tambah data transaksi</title>
+	<title>Tambah Data transaksi</title>
 </head>
 
 <body>
-	<?php require("Header.php"); ?>
-	<h3>Tambah data transaksi</h3>
+	<?php require("header.php"); ?>
+	<h3>Tambah Data transaksi</h3>
 	<form action="" method="POST">
 		<table cellpadding="5">
 			<tr>
@@ -38,7 +38,7 @@ require_once("require.php");
 			</tr>
 			<tr>
 				<td>Tgl. / Bulan / Tahun bayar :</td>
-				<td><input type="text" name="tgl" size="5" placeholder="Tanggal.">
+				<td><input type="text" name="tanggal" size="5" placeholder="Tanggal.">
 					<input type="text" name="bulan" size="10" placeholder="Bulan.">
 					<input type="text" name="tahun" size="5" placeholder="Tahun.">
 				</td>
@@ -72,7 +72,7 @@ require_once("require.php");
 if (isset($_POST['simpan'])) {
 	$petugas = $_POST['petugas'];
 	$nama = $_POST['siswa'];
-	$tgl = $_POST['tgl'];
+	$tanggal = $_POST['tanggal'];
 	$bulan = $_POST['bulan'];
 	$tahun = $_POST['tahun'];
 	$spp = $_POST['spp'];
@@ -83,7 +83,7 @@ if (isset($_POST['simpan'])) {
 		echo "<script>alert('Tahun spp tersebut sudah ada pada siswa');</script>";
 	} else {
 		$s = mysqli_query($db, "INSERT INTO pembayaran VALUES
-                (NULL, '$petugas', '$nama', '$tgl', '$bulan', '$tahun', '$spp', '$jumlah')");
+		(NULL, '$petugas', '$nama', '$tanggal', '$bulan', '$tahun', '$spp', '$jumlah')");
 		// Arahkan ke menu transaksi
 		if ($s) {
 			header("location: transaksi.php");

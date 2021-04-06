@@ -11,7 +11,7 @@ require_once("require.php");
 
 <body>
     <!-- Panggil header -->
-    <?php require("Header.php"); ?>
+    <?php require("header.php"); ?>
     <!-- Konten -->
     <h3>Tambah Siswa</h3>
     <form action="" method="POST">

@@ -17,10 +17,6 @@ require_once("require.php");
     <form action="" method="POST">
         <table cellpadding="5">
             <tr>
-                <td>Id Kelas :</td>
-                <td><input type="number" name="no"></td>
-            </tr>
-            <tr>
                 <td>Nama Kelas :</td>
                 <td><input type="text" name="nama"></td>
             </tr>
