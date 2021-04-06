@@ -26,15 +26,15 @@ $siswa = mysqli_query($db, "SELECT * FROM siswa WHERE nisn='$nisnSiswa'");
                     <td><input type="text" name="nama" value="<?= $row['nama']; ?>"></td>
                 </tr>
                 <tr>
-                    <td>Kelas :</td>
-                    <td><select name="kelas">
-                            <?php
-                            $kelas = mysqli_query($db, "SELECT * FROM kelas");
-                            while ($r = mysqli_fetch_assoc($kelas)) { ?>
-                                <option value="<?= $r['id_kelas']; ?>"><?= $r['nama_kelas'] . " | "
-                                                                            . $r['kompetensi_keahlian']; ?></option>
-                            <?php } ?>
-                        </select></td>
+                    <<<<<<< HEAD <td>Kelas :</td>
+                        <td><select name="kelas">
+                                <?php
+                                $kelas = mysqli_query($db, "SELECT * FROM kelas");
+                                while ($r = mysqli_fetch_assoc($kelas)) { ?>
+                                    <option value="<?= $r['id_kelas']; ?>"><?= $r['nama_kelas'] . " | "
+                                                                                . $r['kompetensi_keahlian']; ?></option>
+                                <?php } ?>
+                            </select></td>
                 </tr>
                 <tr>
                     <td>Alamat :</td>
@@ -71,4 +71,4 @@ if (isset($_POST['simpan'])) {
         echo "<script>alert('Gagal'); </script>";
     }
 }
-?>
+?> 80ffd4b98bb32a568dc498634f20818633bf1e4f
